@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Main</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<style>
+		body {
+			background-color: #222222;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20250510224841">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="skeleton-wrapper" id='skeleton-wrapper' style="position: fixed; min-width: 100vw; overflow: hidden;
+				min-height: 100vh;	display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				gap: 12px;
+				padding: 16px;
+				border-radius: 8px;
+				background-color: #1e1e1e; /* Темный фон */
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+				 
+				z-index: 10000;
+				">
+		<div class="skeleton-header" style="width: 100%;
+				height: 180px;
+				border-radius: 8px;
+				background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+				background-size: 200% 100%;
+				animation: skeleton-loading 1.5s infinite;">
+		</div>
+		<div class="skeleton-header" style="width: 100%;
+				height: 180px;
+				border-radius: 8px;
+				background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+				background-size: 200% 100%;
+				animation: skeleton-loading 1.5s infinite;">
+		</div>
+		<div class="skeleton-header" style="width: 100%;
+				height: 180px;
+				border-radius: 8px;
+				background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+				background-size: 200% 100%;
+				animation: skeleton-loading 1.5s infinite;">
+		</div>
+		<div class="skeleton-header" style="width: 100%;
+			height: 180px;
+			border-radius: 8px;
+			background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+			background-size: 200% 100%;
+			animation: skeleton-loading 1.5s infinite;">
+		</div>
+		<div class="skeleton-line" style="	width: 100%;
+				height: 25px;
+				border-radius: 4px;
+				background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+				background-size: 200% 100%;
+				animation: skeleton-loading 1.5s infinite;">
+		</div>
+
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<a href="#">
+						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logotype"></picture>
+					</a>
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">Menu</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Recipes</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Chefts</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Contacts</a></li>
+						</ul>
+					</nav>
+					<button type="button" class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section data-fullscreen class="page__hero hero">
+				<div class="hero__bg"><picture><source srcset="img/hero-bg.webp" type="image/webp"><img loading="lazy" src="img/hero-bg.png" alt="hero-bg"></picture></div>
+				<div class="hero__container">
+					<div data-scroll class="hero__body">
+						<h1 class="hero__title">
+							Your<span> favourite food</span> <br>
+							delivered <span>hot & fresh</span>
+						</h1>
+						<div class="hero__descr">
+							HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & marinating, so you can cook a
+							fresh homemade dinner in just 15 minutes.
+						</div>
+						<button data-popup="#popup" type="button" class="hero__button btn" id="data-popup">Order Now </button>
+					</div>
+					<div data-scroll class="hero__items">
+						<div class="hero__item item-hero">
+							<div class="item-hero__icon"><picture><source srcset="img/clock.webp" type="image/webp"><img loading="lazy" src="img/clock.png" alt="clock"></picture></div>
+							<div class="item-hero__date">Today 10:00 am - 7:00 pm</div>
+							<div class="item-hero__value">Working hours</div>
+						</div>
+						<div class="hero__item item-hero">
+							<div class="item-hero__icon"><picture><source srcset="img/mail.webp" type="image/webp"><img loading="lazy" src="img/mail.png" alt="mail"></picture></div>
+							<div class="item-hero__date">Velyka Vasylkivska 100</div>
+							<div class="item-hero__value">Get Directions</div>
+						</div>
+						<a href="tel:+380638332415" class="hero__item item-hero item-hero_phone">
+							<div class="item-hero__icon"><picture><source srcset="img/call.webp" type="image/webp"><img loading="lazy" src="img/call.png" alt="call"></picture></div>
+							<div class="item-hero__date">+38 (063)833 24 15</div>
+							<div class="item-hero__value">Call online</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="page__about about">
+				<div class="about__container">
+					<div data-scroll class="about__body">
+						<h2 class="about__title title">
+							<div class="title__value">The Basics Of Healthy Food</div>
+							<span>about</span>
+						</h2>
+						<div class="about__decr">
+							In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur
+							voluptate est. Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
+						</div>
+					</div>
+					<div data-scroll class="about__content">
+						<div class="about__slider">
+							<div class="about__swiper">
+								<a href="#" class="about__slide slide-about">
+									<div class="slide-about__image">
+										<picture><source srcset="img/slider-product-1.webp" type="image/webp"><img loading="lazy" src="img/slider-product-1.jpg" alt="product-1"></picture>
+									</div>
+								</a>
+								<a href="#" class="about__slide slide-about">
+									<div class="slide-about__image">
+										<picture><source srcset="img/slider-product-2.webp" type="image/webp"><img loading="lazy" src="img/slider-product-2.jpg" alt="product-2"></picture>
+									</div>
+								</a>
+								<a href="#" class="about__slide slide-about">
+									<div class="slide-about__image">
+										<picture><source srcset="img/slider-product-1.webp" type="image/webp"><img loading="lazy" src="img/slider-product-1.jpg" alt="product-1"></picture>
+									</div>
+								</a>
+							</div>
+							<div class="about__control">
+								<button type="submit" class="about__arrow about__arrow_next arrow arrow_next">
+									<img loading="lazy" src="img/arrow.svg" alt="arrow">
+								</button>
+								<button type="submit" class="about__arrow about__arrow_prev arrow arrow_prev">
+									<img loading="lazy" src="img/arrow.svg" alt="arrow">
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__work work">
+				<div class="work__container">
+					<h2 data-scroll class="work__title title title_after">
+						<div class="title__value">how it works</div>
+						<span>work</span>
+					</h2>
+					<div data-scroll class="work__items">
+						<section class="work__item item-work">
+							<span>
+								<a href="#" class="item-work__title">Pick meals
+								</a>
+							</span>
+							<div class="item-work__text">
+								Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie
+								options.
+							</div>
+						</section>
+						<section class="work__item item-work">
+							<span>
+								<a href="#" class="item-work__title">Choose how often
+								</a>
+							</span>
+							<div class="item-work__text">
+								Our team of chefs do the prep work - no more chopping, measuring, or sink full of dishes!
+							</div>
+						</section>
+						<section class="work__item item-work">
+							<span>
+								<a href="#" class="item-work__title">fast deliveries
+								</a>
+							</span>
+							<div class="item-work__text">
+								Your freshly prepped 15-min dinner kits arrive on your doorstep in a refrigerated box.
+							</div>
+						</section>
+						<section class="work__item item-work">
+							<span>
+								<a href="#" class="item-work__title">Tasty Meals
+								</a>
+							</span>
+
+							<div class="item-work__text">
+								Gobble makes cooking fast, so you have more time to unwind and be with family.
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+			<section class="page__products products">
+				<div class="products__container">
+					<h2 data-scroll class="products__title title">
+						<div class="title__value">Dish Of The Day</div>
+						<span>EVENTS</span>
+					</h2>
+					<div data-scroll class="products__items">
+						<div class="products__item item-products">
+							<a href="#" class="item-products__image"><picture><source srcset="img/product-1.webp" type="image/webp"><img loading="lazy" src="img/product-1.jpg" alt=""></picture></a>
+							<div class="item-products__body">
+								<h3 class="item-products__title">
+									<a href="#">Featured Meal</a>
+									<span>Served with french fries + drink</span>
+								</h3>
+								<div class="item-products__desrc">
+									Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+									patty and more...
+								</div>
+								<div class="item-products__footer">
+									<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
+									<button data-popup="#popup" type="submit" class="item-products__button btn ">Order</button>
+								</div>
+							</div>
+						</div>
+						<div class="products__item item-products">
+							<a href="#" class="item-products__image"><picture><source srcset="img/product-2.webp" type="image/webp"><img loading="lazy" src="img/product-2.jpg" alt=""></picture></a>
+							<div class="item-products__body">
+								<h3 class="item-products__title">
+									<a href="#">Featured Meal</a>
+									<span>Served with french fries + drink</span>
+								</h3>
+								<div class="item-products__desrc">
+									Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+									patty and more...
+								</div>
+								<div class="item-products__footer">
+									<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
+									<button data-popup="#popup" type="submit" class="item-products__button btn ">Order</button>
+								</div>
+							</div>
+						</div>
+						<div class="products__item item-products">
+							<a href="#" class="item-products__image"><picture><source srcset="img/product-3.webp" type="image/webp"><img loading="lazy" src="img/product-3.jpg" alt="product-3"></picture></a>
+							<div class="item-products__body">
+								<h3 class="item-products__title">
+									<a href="#">Featured Meal</a>
+									<span>Served with french fries + drink</span>
+								</h3>
+								<div class="item-products__desrc">
+									Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+									patty and more...
+								</div>
+								<div class="item-products__footer">
+									<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
+									<button data-popup="#popup" type="submit" class="item-products__button btn ">Order</button>
+								</div>
+							</div>
+						</div>
+						<div class="products__item item-products">
+							<a href="#" class="item-products__image"><picture><source srcset="img/product-4.webp" type="image/webp"><img loading="lazy" src="img/product-4.jpg" alt="product-4"></picture></a>
+							<div class="item-products__body">
+								<h3 class="item-products__title">
+									<a href="#">Featured Meal</a>
+									<span>Served with french fries + drink</span>
+								</h3>
+								<div class="item-products__desrc">
+									Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+									patty and more...
+								</div>
+								<div class="item-products__footer">
+									<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
+									<button data-popup="#popup" type="submit" class="item-products__button btn ">Order</button>
+								</div>
+							</div>
+						</div>
+						<div class="products__item item-products">
+							<a href="#" class="item-products__image"><picture><source srcset="img/product-5.webp" type="image/webp"><img loading="lazy" src="img/product-5.jpg" alt="product-5"></picture></a>
+							<div class="item-products__body">
+								<h3 class="item-products__title">
+									<a href="#">Featured Meal</a>
+									<span>Served with french fries + drink</span>
+								</h3>
+								<div class="item-products__desrc">
+									Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+									patty and more...
+								</div>
+								<div class="item-products__footer">
+									<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
+									<button data-popup="#popup" type="submit" class="item-products__button btn ">Order</button>
+								</div>
+							</div>
+						</div>
+						<div class="products__item item-products">
+							<a href="#" class="item-products__image"><picture><source srcset="img/product-6.webp" type="image/webp"><img loading="lazy" src="img/product-6.jpg" alt="product-6"></picture></a>
+							<div class="item-products__body">
+								<h3 class="item-products__title">
+									<a href="#">Featured Meal</a>
+									<span>Served with french fries + drink</span>
+								</h3>
+								<div class="item-products__desrc">
+									Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+									patty and more...
+								</div>
+								<div class="item-products__footer">
+									<div class="rating rating_set">
+										<div class="rating__body">
+											<div class="rating__active"></div>
+											<div class="rating__items">
+												<input type="radio" class="rating__item" value="1" name="rating">
+												<input type="radio" class="rating__item" value="2" name="rating">
+												<input type="radio" class="rating__item" value="3" name="rating">
+												<input type="radio" class="rating__item" value="4" name="rating">
+												<input type="radio" class="rating__item" value="5" name="rating">
+											</div>
+										</div>
+										<div class="rating__value">5</div>
+									</div>
+									<button data-popup="#popup" type="submit" class="item-products__button btn ">Order</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__team team">
+				<div class="team__container">
+					<h2 data-scroll class="team__title title">
+						<div class="title__value">This month's chefs</div>
+						<span>CHEFS</span>
+					</h2>
+					<div data-scroll class="team__items">
+						<div class="team__item item-team">
+							<div class="item-team__user">
+								<a href="#" class="item-team__icon"><picture><source srcset="img/team-user-3.webp" type="image/webp"><img loading="lazy" src="img/team-user-3.jpg" alt="team-user"></picture></a>
+								<div class="item-team__content">
+									<div class="item-team__name">Gregory Flores</div>
+									<div class="item-team__value">Chef of the cold</div>
+								</div>
+							</div>
+							<div class="item-team__media">
+								<div class="item-team__image item-team__image_big"><picture><source srcset="img/team-1.webp" type="image/webp"><img loading="lazy" src="img/team-1.jpg" alt="team"></picture>
+								</div>
+								<div class="item-team__image"><picture><source srcset="img/team-2.webp" type="image/webp"><img loading="lazy" src="img/team-2.jpg" alt=""></picture></div>
+								<div class="item-team__image"><picture><source srcset="img/team-3.webp" type="image/webp"><img loading="lazy" src="img/team-3.jpg" alt=""></picture></div>
+							</div>
+						</div>
+						<div class="team__item item-team">
+							<div class="item-team__user">
+								<a href="#" class="item-team__icon"><picture><source srcset="img/team-user-2.webp" type="image/webp"><img loading="lazy" src="img/team-user-2.jpg" alt="team-user"></picture></a>
+								<div class="item-team__content">
+									<div class="item-team__name">Annette Cooper</div>
+									<div class="item-team__value">Chef of the cold</div>
+								</div>
+							</div>
+							<div class="item-team__media">
+								<div class="item-team__image item-team__image_big"><picture><source srcset="img/team-4.webp" type="image/webp"><img loading="lazy" src="img/team-4.jpg" alt="team"></picture>
+								</div>
+								<div class="item-team__image"><picture><source srcset="img/team-5.webp" type="image/webp"><img loading="lazy" src="img/team-5.jpg" alt=""></picture></div>
+								<div class="item-team__image"><picture><source srcset="img/team-6.webp" type="image/webp"><img loading="lazy" src="img/team-6.jpg" alt=""></picture></div>
+							</div>
+						</div>
+						<div class="team__item item-team">
+							<div class="item-team__user">
+								<a href="#" class="item-team__icon"><picture><source srcset="img/team-user-1.webp" type="image/webp"><img loading="lazy" src="img/team-user-1.jpg" alt="team-user"></picture></a>
+								<div class="item-team__content">
+									<div class="item-team__name">Greg Fox</div>
+									<div class="item-team__value">Chef of the cold</div>
+								</div>
+							</div>
+							<div class="item-team__media">
+								<div class="item-team__image item-team__image_big"><picture><source srcset="img/team-8.webp" type="image/webp"><img loading="lazy" src="img/team-8.jpg" alt="team"></picture>
+								</div>
+								<div class="item-team__image"><picture><source srcset="img/team-9.webp" type="image/webp"><img loading="lazy" src="img/team-9.jpg" alt="team"></picture></div>
+								<div class="item-team__image"><picture><source srcset="img/team-7.webp" type="image/webp"><img loading="lazy" src="img/team-7.jpg" alt="team"></picture></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__recipes recipes">
+				<div class="recipes__container">
+					<h2 data-scroll class="recipes__title title">
+						<div class="title__value">Recipes From Our Chefs</div>
+						<span>RECIPES</span>
+					</h2>
+					<div class="recipes__row">
+						<div data-scroll class="recipes__card card-recipes">
+							<div class="card-recipes__bg"><picture><source srcset="img/recipes-card-bg.webp" type="image/webp"><img loading="lazy" src="img/recipes-card-bg.png" alt=""></picture></div>
+							<div class="card-recipes__content">
+								<button class="card-recipes__arrow">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<mask id="mask0_2_234" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z" fill="white" />
+										</mask>
+										<g mask="url(#mask0_2_234)">
+											<rect width="26" height="26" transform="matrix(-1 0 0 1 21 -5)" fill="#4D4D4D" />
+										</g>
+									</svg>
+								</button>
+								<div class="card-recipes__label">breakfast</div>
+								<div class="card-recipes__body">
+									<div class="card-recipes__date">05 Jul 2016</div>
+									<a href="#" class="item-recipes__decr">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut
+									</a>
+									<div class="card-recipes__avtor">Jason Keller</div>
+								</div>
+								<div class="card-recipes__info info-card">
+									<div class="info-card__value info-card__value_eye">275</div>
+									<div class="info-card__value info-card__value_chat">12</div>
+								</div>
+							</div>
+						</div>
+						<div data-scroll class="recipes__items">
+							<div class="recipes__item item-recipes">
+								<div class="item-recipes__body">
+									<a href="#" class="item-recipes__decr">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut
+									</a>
+									<div class="item-recipes__footer">
+										<div class="item-recipes__info">
+											<div class="item-recipes__label">lunch</div>
+											<div class="item-recipes__date">07 Jan 2016</div>
+										</div>
+										<div class=" info-card">
+											<div class="info-card__value info-card__value_eye">275</div>
+											<div class="info-card__value info-card__value_chat">12</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recipes__item item-recipes item-recipes_bg">
+								<div class="item-recipes__bg"><picture><source srcset="img/item-recipes-bg.webp" type="image/webp"><img loading="lazy" src="img/item-recipes-bg.png" alt=""></picture></div>
+								<div class="item-recipes__body">
+									<a href="#" class="item-recipes__decr">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut
+									</a>
+									<div class="item-recipes__footer">
+										<div class="item-recipes__info">
+											<div class="item-recipes__label">lunch</div>
+											<div class="item-recipes__date">07 Jan 2016</div>
+										</div>
+										<div class="card-recipes__info info-card">
+											<div class="info-card__value info-card__value_eye">275</div>
+											<div class="info-card__value info-card__value_chat">12</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recipes__item item-recipes">
+								<a href="#" class="item-recipes__decr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+									ut
+								</a>
+								<div class="item-recipes__footer">
+									<div class="item-recipes__info">
+										<div class="item-recipes__label">lunch</div>
+										<div class="item-recipes__date">07 Jan 2016</div>
+									</div>
+									<div class="card-recipes__info info-card">
+										<div class="info-card__value info-card__value_eye">275</div>
+										<div class="info-card__value info-card__value_chat">12</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__social social">
+				<div class="social__container">
+					<h2 data-scroll class="social__title title">
+						<div class="title__value">We in Social</div>
+						<span>SOCIAL</span>
+					</h2>
+					<div data-scroll class="social__items">
+						<div class="social__item item-social">
+							<div class="item-social__head">
+								<a href="#" class="item-social__icon"><img loading="lazy" src="img/facebook.svg" alt="">
+									<span>Twitter</span>
+								</a>
+								<a href="#" class="item-social__btn btn">follow us</a>
+							</div>
+							<div class="item-social__line"></div>
+							<div data-simplebar class="item-social__body">
+								<div class="item-social__content">
+									<div class="item-social__date">24 Jun at 16:20 pm</div>
+									<div class="item-social__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+									</div>
+									<a href="#" class="item-social__avtor">@DennisFerguson</a>
+								</div>
+							</div>
+						</div>
+						<div class="social__item item-social item-social_media">
+							<div class="item-social__head">
+								<a href="#" class="item-social__icon"><img loading="lazy" src="img/instagram.svg" alt="">
+									<span>Twitter</span>
+								</a>
+								<a href="#" class="item-social__btn btn">follow us</a>
+							</div>
+							<div class="item-social__line"></div>
+							<div data-simplebar class="item-social__body item-social__body_media">
+								<div class="item-social__images">
+									<div class="item-social__img"><picture><source srcset="img/social-1.webp" type="image/webp"><img loading="lazy" src="img/social-1.jpg" alt="social-1"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-2.webp" type="image/webp"><img loading="lazy" src="img/social-2.jpg" alt="social-2"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-3.webp" type="image/webp"><img loading="lazy" src="img/social-3.jpg" alt="social-3"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-4.webp" type="image/webp"><img loading="lazy" src="img/social-4.jpg" alt="social-4"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-5.webp" type="image/webp"><img loading="lazy" src="img/social-5.jpg" alt="social-5"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-6.webp" type="image/webp"><img loading="lazy" src="img/social-6.jpg" alt="social-6"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-1.webp" type="image/webp"><img loading="lazy" src="img/social-1.jpg" alt="social-7"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-2.webp" type="image/webp"><img loading="lazy" src="img/social-2.jpg" alt="social-8"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-3.webp" type="image/webp"><img loading="lazy" src="img/social-3.jpg" alt="social-9"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-4.webp" type="image/webp"><img loading="lazy" src="img/social-4.jpg" alt="social-10"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-5.webp" type="image/webp"><img loading="lazy" src="img/social-5.jpg" alt="social-11"></picture></div>
+									<div class="item-social__img"><picture><source srcset="img/social-6.webp" type="image/webp"><img loading="lazy" src="img/social-6.jpg" alt="social-12"></picture></div>
+								</div>
+							</div>
+						</div>
+						<div class="social__item item-social">
+							<div class="item-social__head">
+								<a href="#" class="item-social__icon"><img loading="lazy" src="img/twitter.svg" alt="">
+									<span>Twitter</span>
+								</a>
+								<a href="#" class="item-social__btn btn">follow us</a>
+							</div>
+							<div class="item-social__line"></div>
+							<div data-simplebar class="item-social__body">
+								<div class="item-social__content">
+									<div class="item-social__date">24 Jun at 16:20 pm</div>
+									<div class="item-social__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut
+										Lorem ipsum dolor sit amet, consectetur adipiscing
+									</div>
+									<a href="#" class="item-social__avtor">@DennisFerguson</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="info">
+				<div class="info__container">
+					<div data-scroll class="info__items">
+						<div class="hero__item item-hero">
+							<div class="item-hero__icon"><picture><source srcset="img/clock.webp" type="image/webp"><img loading="lazy" src="img/clock.png" alt=""></picture></div>
+							<div class="item-hero__date">Today 10:00 am - 7:00 pm</div>
+							<div class="item-hero__value">Working hours</div>
+						</div>
+						<div class="hero__item item-hero">
+							<div class="item-hero__icon"><picture><source srcset="img/mail.webp" type="image/webp"><img loading="lazy" src="img/mail.png" alt=""></picture></div>
+							<div class="item-hero__date">Velyka Vasylkivska 100</div>
+							<div class="item-hero__value">Get Directions</div>
+						</div>
+						<a href="tel:+380638332415" class="hero__item item-hero item-hero_phone">
+							<div class="item-hero__icon"><picture><source srcset="img/call.webp" type="image/webp"><img loading="lazy" src="img/call.png" alt=""></picture></div>
+							<div class="item-hero__date">+38 (063)833 24 15</div>
+							<div class="item-hero__value">Call online</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<a href="#" class="footer__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture></a>
+				<div class="footer__copyy">© Designed by Yellow Snow. All Rights Reserved. </div>
+			</div>
+		</footer>
+	</div>
+	<!-- <script src="js/app.min.js?_v=20250510224841"></script> -->
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+
+				<form id='form' class='popup__form'>
+					<label class='popup__label'>
+						<span>Your email</span>
+						<input id='email-input' required type='email' name='email' />
+
+					</label>
+
+					<button type="submit" class='popup__button'>Submit</button>
+				</form>
+				<div id="form-message" class="form-message"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- <script src="js/app.min.js?_v=20250510224841"></script> -->
+
+	<script src="js/app.min.js?_v=20250510224841"></script>
+
+</body>
+
+</html>
